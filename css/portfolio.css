@@ -1,0 +1,544 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.logo {
+  padding: 100px 130px;
+  text-align: center;
+  background: #FECE00;
+  /*color: Yellow;*/
+}
+
+/* Increase the font size of the heading */
+.logo h1 {
+  font-size: 40px;
+}
+
+/* Style the navigation bar links */
+.menu .menulist {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 20px 60px;
+  text-decoration: none;
+  
+}
+
+/*About*/
+
+.about{
+	width=100%;
+	background-color: black;
+	padding-top: 30px;
+	padding-bottom:80px;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-family: monospace;
+	letter-spacing: 2px;
+	font-size: 30px;
+	color: #00DFFC;
+	text-align: center;
+	justify-content: center;
+}
+
+/*Typewriting Effect on About Van*/
+.type{
+  font-family: monospace;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+    linear-gradient(#00DFFC 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b 0.7s infinite steps(1),   
+    t calc(var(--n)*.04s) steps(var(--n)) forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+
+
+/*More About Me*/
+/* Create three equal columns that floats next to each other */
+.column1, .column2, .column3 {
+  float: left;
+  width: 33.33%;
+  padding: 10px 40px;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+}
+
+/*.column1 img:hover{
+  content: url('file:///C:/Users/vanre/OneDrive/Desktop/Project/images/education2.png');
+}
+
+.column2 img:hover{
+  content: url('file:///C:/Users/vanre/OneDrive/Desktop/Project/images/athena2.png'); 
+}
+
+.column3 img:hover{
+  content: url('file:///C:/Users/vanre/OneDrive/Desktop/Project/images/interest2.png');
+  cursor:pointer;
+}*/
+
+
+.column1 p, .column2 p, .column3 p{
+	line-height: 20pt;
+	color: black;
+}
+
+.column1 h2, .column2 h2, .column3 h2{
+	color: darkred;
+	font-size: 30px;
+}
+
+
+.column1 h3, .column2 h3, .column3 h3{
+	color: darkred;
+	font-size: 25px;
+}
+
+.moreabout{
+	padding-top: 40px;
+}
+
+/* Clear floats after the columns */
+.moreabout:after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 2vh;
+}
+
+.line{
+    width: 100px;
+    border-bottom: 1px solid black;
+    margin-left: auto;
+	margin-right:auto;
+    }
+
+/*Menu Icon*/
+.hamburger {
+  position: fixed;
+  /* a large z-index puts the ham button above the rest of the page*/
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+  background-color: #FECE00;
+  opacity: 0.6;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.hamburger:hover{
+  opacity:1;
+}
+
+.menu {
+  position: fixed;
+  /* give the menu a larger z-index than the ham link
+  to put the menu above it */
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* basic menu styling*/
+  list-style: none;
+  background: black;
+  display: inline-block;
+  padding: 5px;
+
+  flex-direction: column;
+  /* animate slide up/down */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+  
+}
+
+.menu a{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.menulist:hover, .menulist a:hover{
+	background-color: #FECE00;
+	color: black;
+	font-weight: 700;
+}
+
+
+/*.close {
+  position: absolute;
+  border: none;
+  color: white;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}*/
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+}
+.close:hover {
+  opacity: 1;
+  
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FECE00;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+
+}
+
+.menu:target {
+  /* show menu */
+  transform: translateY(0);
+}
+
+/*hambuger icon*/
+.menuicon{
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	margin: 6px 0;
+}
+
+/*Gallery*/
+
+.gallery p.tools{
+	width=100%;
+	background-color: #FECE00;
+	font-family: Helvetica;
+	letter-spacing: 2px;
+	font-size: 30px;
+	color: black;
+	text-align: center;
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom:20px;
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+.slides-item {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  height: 600px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform .5s;
+  width: 100%;
+}
+
+#slide-1:active{
+  .slider-nav{
+  background-color: #000;
+  color: #fff;
+  }
+}
+
+.carousel__nav {
+  padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slide-1 {
+  background-color: darkgray;
+}
+
+.slide-1 p{
+  font-size: 40px;
+  padding-right: 100px;
+  color: black;
+}
+
+.slide-2 {
+  background-color: lightblue;
+}
+
+.slide-2 p{
+  font-size: 40px;
+  padding-right: 100px;
+  color: black;
+}
+
+.slide-3 {
+  background-color: #cdf;
+}
+
+.slide-3 p{
+  font-size: 40px;
+  padding-left: 40px;
+  padding-right: 100px;
+  color: black;
+}
+
+.slide-3 img{
+	padding-left: 80px;
+}
+
+.slide-4 {
+  background-color: pink;
+}
+
+.slide-4 p{
+  font-size: 40px;
+  padding-right: 100px;
+  color: black;
+}
+
+.slide-5 {
+  background-color: #ffc;
+}
+
+.slide-5 p{
+  font-size: 40px;
+  padding-left: 30px;
+  padding-right: 100px;
+  color: black;
+}
+
+.slide-5 img{
+	padding-left: 80px;
+}
+
+
+/*Footer*/
+
+.contact{
+	background-color: #FECE00;
+	color: black;
+}
+
+.contact:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contactinfo, .socials{
+  float: left;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #FECE00;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+}
+
+.contactinfo h2, .socials h2{
+  font-family: Helvetica;
+  font-weight: 900;
+  height: 2vh;
+}
+
+.bottom{
+	background-image: linear-gradient(#303030, #242424);
+	width: 100%;
+	height: 50px;
+	color: darkgray;
+	text-align: center;
+	padding: 15px;
+}
+
+/*media queries*/
+@media only screen and (max-width: 1405px) {
+	
+	.logo {
+	padding: 50px 30px;
+	}	
+	
+  .logo img{
+	width: 300px;
+	height: 300px;
+  }
+  
+  .menu .menulist {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+.type{
+	animation-delay:0s;
+	
+}	
+  .column1, .column2, .column3 {
+  float: none;
+  width: 100%;
+}
+
+.about{
+	padding-top: 10px;
+	padding-bottom:40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+}
+
+.gallery p.tools{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.slides-item{
+	display: block;
+	text-align: center;
+	padding-top: 50px;
+}
+
+
+#slide-1 p, #slide-2 p, #slide-5 p{
+	font-size: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#slide-3 p{
+	font-size: 18px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 0;
+}
+
+#slide-4 p{
+	font-size: 17px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#slide-1 img, #slide-2 img{
+	height:300px;
+	align-items: center;
+	justify-content:center;
+}	
+
+#slide-3 img{
+	padding-left:20px;
+	padding-right: 20px;
+	height:260px;
+}
+
+#slide-4 img{
+	height: 280px;
+	
+}
+
+ #slide-5 img{
+	padding-right: 70px;
+	padding-top: 50px;
+	height:300px;
+	align-items: center;
+	justify-content:center;
+
+}
+
+.contactinfo h2, .socials h2{
+	font-size: 18px;
+}
+
+.contactinfo, .socials{
+  width: 100%;
+}
+
+.socials img{
+	display: inline;
+}
+
+.soc {
+	display: inline-block;
+	
+}
+}
+
+@media only screen and (min-height: 250px) and (max-height: 600px){
+  .menu {
+   height: 60px;
+}
+
+  .soc {
+	display: inline-block;
+	
+}
+}
